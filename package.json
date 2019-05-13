@@ -1,0 +1,33 @@
+{
+  "name": "mysqladmin-web",
+  "version": "1.0.0",
+  "description": "mysqladmin is a GUI client for mysql like phpadmin",
+  "main": "app.js",
+  "scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://chaomingd:happycm1995@github.com/chaomingd/mysqladmin-web.git"
+  },
+  "keywords": [
+    "mysqladmin",
+    "node",
+    "mysql",
+    "admin"
+  ],
+  "author": "chaomingd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chaomingd/mysqladmin-web/issues"
+  },
+  "homepage": "https://github.com/chaomingd/mysqladmin-web#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.11.0",
+    "mysql": "^2.17.1"
+  }
+}
