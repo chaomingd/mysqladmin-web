@@ -6,7 +6,8 @@ module.exports = app => {
 	files.forEach(item => {
 			if (item !== 'index.js') {
 					const router = require(path.resolve(__dirname,item))
-					app.use(router.routes(), router.allowedMethods())
+					app.use(router.routes())
+					app.use(router.allowedMethods())
 			}
 	})
 }

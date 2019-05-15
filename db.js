@@ -2,7 +2,7 @@ const mysql=require('mysql');
 let db;
 
 function mysqlConnect(mysqlConfig) {
-	db = mysql.createPool({
+	db = mysql.createConnection({
 		connectionLimit: 10,
 		...mysqlConfig
 	});
@@ -20,14 +20,16 @@ function mysqlConnect(mysqlConfig) {
 			})
 		})
 	}
-	db.connect(err => {
-		if(err) {
-			return console.error('error connecting: ' + err.stack);
-		}
-		console.log('connected as id ' + connection.threadId);
-	})
 	return db;
 }
+
+mysqlConnect({
+	host: 'localhost',
+	port: 3306,
+	limit: 10,
+	user: 'root',
+	password: 'root'
+});
 
 
 
